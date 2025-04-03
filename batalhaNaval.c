@@ -22,23 +22,23 @@ int main(){
     int cruz1 = 1, cruz2 = 1;
     //utilizei for's aninhados para iniciar uma cruz.   
     for (int i = cruz1 - 1; i <= cruz1 + 1; i++) {
-        tabuleiro[i][cruz2] = 3;
+        tabuleiro[i][cruz2] = 1;
 
             for (int j = cruz2 - 1; j <= cruz2 + 1; j++) {
-                tabuleiro[cruz1][j] = 3;
+                tabuleiro[cruz1][j] = 1;
             }
     }
     //variaveis para o cone.
     int cone1 = 6, cone2 = 3;
     //utilizei o limite de for's aninhados para iniciar um cone.
     for (int i = cone1; i <= cone1 + 2; i++) {
-        tabuleiro[i][cone2] = 3;
+        tabuleiro[i][cone2] = 1;
 
             for (int j = cone2 - 1; j <= cone2 + 1; j++) {
-                tabuleiro[cone1 + 1][j] = 3;
+                tabuleiro[cone1 + 1][j] = 1;
 
                     for (int j = cone2 - 2; j <= cone2 +2; j++){
-                        tabuleiro[cone1 + 2][j] = 3;
+                        tabuleiro[cone1 + 2][j] = 1;
                     }
             }
     }
@@ -49,16 +49,16 @@ mesmo sendo um pouco mais dificil de entender, pois posso mudar a posição do m
 é complicado o codigo... mas achei eficiente para talvez colocar scanf para modificar posições de cada ataque,
 pois só baste mexer nas variaveis*/
     for (int i = octaedro1; i <= octaedro1 + 4; i++) {//primeiro for ira inicar o octaedro na celula linha[2]coluna[7]
-        tabuleiro[i][octaedro2] = 3;
+        tabuleiro[i][octaedro2] = 1;
 
             for (int j = octaedro2 - 1; j <= octaedro2 + 1; j++) {
-                tabuleiro[octaedro1 + 1][j] = 3;
+                tabuleiro[octaedro1 + 1][j] = 1;
 
                     for (int j = octaedro2 - 2; j <= octaedro2 + 2; j++){
-                        tabuleiro[octaedro1 + 2][j] = 3;
+                        tabuleiro[octaedro1 + 2][j] = 1;
 
                         for (int j = octaedro2 - 1; j <= octaedro2 + 1; j++) {
-                            tabuleiro[octaedro1 + 3][j] = 3;
+                            tabuleiro[octaedro1 + 3][j] = 1;
                         }
                     }
             }
